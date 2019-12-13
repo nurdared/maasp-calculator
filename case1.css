@@ -1,5 +1,5 @@
 input,select {
-   width: 60%;
+   width: 70%;
 }
 
 th, td {
@@ -24,5 +24,18 @@ table {
 
 .row:after, .row:before {
     content: none;
+}
 
+.case-image {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.description {
+    display: flex;
+}
+
+.text {
+    width: 600px;
+    text-align: justify;
 }
