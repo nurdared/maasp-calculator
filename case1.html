@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <link href="" rel="stylesheet">
+
+
+  <title>MAASP Calculator | A-annulus Case 1</title>
+
+  <link href="./main.550dcf66.css" rel="stylesheet">
+  <link rel="stylesheet" href="case1.css">
+</head>
+
+<body>
+  <!-- Add your content of header -->
+  <header>
+    <nav class="navbar navbar-default active">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html" title="">
+            <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
+            MAASP Calculator
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./index.html" title="">Home</a></li>
+            <!-- <li><a href="./project.html" title="">Project</a></li>
+            <li>
+              <p>
+                <a href="./components.html" class="btn btn-default navbar-btn" title="">Components</a>
+              </p>
+            </li> -->
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <form action="">
+      <div>
+        <h1>A-annulus Case 1</h1>
+        <div class="description row">
+          <img class="case-image" src="/assets/images/Acase1.png" alt="">
+          <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <hr>
+        <table>
+          <thead>
+            <tr class="row">
+              <th>Input of pipes</th>
+              <th>TVD, ft</th>
+              <th>Grade</th>
+              <th>Yp, psi</th>
+              <th>OD, inch</th>
+              <th>Th, inch</th>
+              <th>ACR, inch/years</th>
+              <th>No Years</th>
+              <th>New Th, inch</th>
+              <th>Burst, psi</th>
+              <th>OD/Th.</th>
+              <th>Collapse, psi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row">
+              <td>Prod. casing</td>
+              <td><input type="text" id="n1"></td>
+              <td>
+                <select type="text" id="n2" name="grade" onChange="yp();">
+                  <option value="40000">H-40</option>
+                  <option value="55000">J-55</option>
+                  <option value="55000">K-55</option>
+                  <option value="65000">M-65</option>
+                  <option value="80000">N-80</option>
+                  <option value="80000">L-80</option>
+                  <option value="90000">C-90</option>
+                  <option value="95000">C-95</option>
+                  <option value="95000">T-95</option>
+                  <option value="110000">P-110</option>
+                  <option value="125000">Q-125</option>
+                </select>
+              </td>
+              <td><input value="40000" disabled type="text" id="n3"></td>
+              <td><input type="text" id="n4"></td>
+              <td><input type="text" id="n5"></td>
+              <td><input type="text" id="new5"></td>
+              <td><input type="text" id="new6"></td>
+              <td><input disabled type="text" id="new7"></td>
+              <td><input disabled type="text" id="n6"></td>
+              <td><input disabled type="text" id="n7"></td>
+              <td><input disabled type="text" id="n8"></td>
+            </tr>
+            <tr class="row">
+              <td>Tubing</td>
+              <td><input type="text" id="n9"></td>
+              <td>
+                <select type="text" id="n10" name="grade" onChange="yp();">
+                  <option value="40000">H-40</option>
+                  <option value="55000">J-55</option>
+                  <option value="55000">K-55</option>
+                  <option value="65000">M-65</option>
+                  <option value="80000">N-80</option>
+                  <option value="80000">L-80</option>
+                  <option value="90000">C-90</option>
+                  <option value="95000">C-95</option>
+                  <option value="95000">T-95</option>
+                  <option value="110000">P-110</option>
+                  <option value="125000">Q-125</option>
+                </select>
+              </td>
+              <td><input value="40000" disabled type="text" id="n11"></td>
+              <td><input type="text" id="n12"></td>
+              <td><input type="text" id="n13"></td>
+              <td><input type="text" id="new8"></td>
+              <td><input type="text" id="new9"></td>
+              <td><input disabled type="text" id="new10"></td>
+              <td><input disabled type="text" id="n14"></td>
+              <td><input disabled type="text" id="n15"></td>
+              <td><input disabled type="text" id="n16"></td>
+            </tr>
+            <th></th>
+          </tbody>
+          <thead>
+            <tr class="row">
+              <th>Input of depth</th>
+              <th>TVD, ft</th>
+              <th></th>
+              <th> Input of fluids</th>
+              <th>PPG</th>
+              <th></th>
+              <th colspan="2">Input of SF and equipment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row">
+              <td>Point 1</td>
+              <td><input type="text" id="n17"></td>
+              <td></td>
+              <td>FG</td>
+              <td><input type="text" id="n23"></td>
+              <td></td>
+              <td>SF Burst</td>
+              <td><input type="text" id="n27"></td>
+            </tr>
+            <tr class="row">
+              <td>Point 2</td>
+              <td><input type="text" id="n18"></td>
+              <td></td>
+              <td>FDA</td>
+              <td><input type="text" id="n24"></td>
+              <td></td>
+              <td>SF(SV,ACC),coll</td>
+              <td><input type="text" id="n28"></td>
+            </tr>
+            <tr class="row">
+              <td>Point 3</td>
+              <td><input type="text" id="n19"></td>
+              <td></td>
+              <td>FDTubing</td>
+              <td><input type="text" id="n25"></td>
+              <td></td>
+              <td>PKR,psi</td>
+              <td><input type="text" id="n29"></td>
+            </tr>
+            <tr class="row">
+              <td>Point 5</td>
+              <td><input type="text" id="n20"></td>
+              <td></td>
+              <td>BF</td>
+              <td><input type="text" id="n26"></td>
+              <td></td>
+              <td>Well head PR,psi</td>
+              <td><input type="text" id="new27"></td>
+            </tr>
+            <tr class="row">
+              <td>Point 7A</td>
+              <td><input type="text" id="n21"></td>
+            </tr>
+            <tr class="row">
+              <td>Point 8</td>
+              <td><input type="text" id="n22"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">MAASP, psi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Point 1</td>
+              <td id="n30"></td>
+            </tr>
+            <tr>
+              <td>Point 2</td>
+              <td id="n31"></td>
+            </tr>
+            <tr>
+              <td>Point 3, packer collapse</td>
+              <td id="n32"></td>
+            </tr>
+            <tr>
+              <td>Point 3, element rating</td>
+              <td id="n33"></td>
+            </tr>
+            <tr>
+              <td>Point 5</td>
+              <td id="n34"></td>
+            </tr>
+            <tr>
+              <td>Point 7A</td>
+              <td id="n35"></td>
+            </tr>
+            <tr>
+              <td>Point 8</td>
+              <td id="n36"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="calculate()">Calculate</button>
+    </form>
+  </div>
+
+
+
+
+  <footer class="footer-container white-text-container">
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-xs-12">
+          <h3>Oxygen Team</h3>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-7">
+              <p><small>Website created with support of<a href="https://github.com/nurdared"
+                    title="Create website with free html template"> Nurdaulet Shamilov</a>
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <p class="text-right">
+                <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navActivePage();
+      scrollRevelation('.reveal');
+    });
+  </script>
+
+  <script type="text/javascript" src="./main.0cf8b554.js"></script>
+  <script type="text/javascript" src="case1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    $('form').submit(function (evt) {
+      evt.preventDefault();
+    });
+  </script>
+
+</body>
+
+</html>

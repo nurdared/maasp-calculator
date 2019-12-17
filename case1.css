@@ -1,0 +1,41 @@
+input,select {
+   width: 70%;
+}
+
+th, td {
+    font-size: 13px;
+    width: 150px;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+table {
+    border-collapse:separate; 
+    border-spacing: 0 10px; 
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row:after, .row:before {
+    content: none;
+}
+
+.case-image {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.description {
+    display: flex;
+}
+
+.text {
+    width: 600px;
+    text-align: justify;
+}
