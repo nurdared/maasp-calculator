@@ -121,3 +121,7 @@ function collapse(yp, dt) {
     return pressure;
 
 }
+
+function reset(){
+    document.querySelector("form").reset();
+}

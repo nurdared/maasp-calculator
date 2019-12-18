@@ -3,8 +3,13 @@ input,select {
 }
 
 th, td {
-    font-size: 13px;
+    font-size: 14px;
     width: 150px;
+}
+
+th {
+    color: black;
+
 }
 
 .wrapper {
@@ -29,14 +34,31 @@ table {
 .case-image {
     width: 400px;
     margin-right: 20px;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
+    -webkit-box-shadow: 3px 4px 17px -1px rgba(105,102,105,0.9);
+    -moz-box-shadow: 3px 4px 17px -1px rgba(105,102,105,0.9);
+    box-shadow: 3px 4px 17px -1px rgba(105,102,105,0.9);
+    border-radius: 0px 16px 100px 16px;
+    -moz-border-radius: 0px 16px 100px 16px;
+    -webkit-border-radius: 0px 16px 100px 16px;
 }
 
 .description {
     display: flex;
+    font-size: 22px;
 }
 
 .text {
-    width: 600px;
+    width: 900px;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
 }
+
+.dropdown-menu {
+    background: white;
+    opacity: 0.7;
+    border-radius: 10%;
+}
+
