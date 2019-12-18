@@ -27,8 +27,9 @@ table {
 }
 
 .case-image {
-    width: 300px;
+    width: 400px;
     margin-right: 20px;
+    border: 2px solid gray;
 }
 
 .description {
