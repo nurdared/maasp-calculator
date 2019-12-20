@@ -32,7 +32,7 @@ table {
 
 .case-image {
     width: 33%;
-    max-height: 450px;
+    max-height: 400px;
     margin-right: 20px;
     /* border: 2px solid gray; */
     -webkit-box-shadow: 3px 4px 17px -1px rgba(105,102,105,0.9);
