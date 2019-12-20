@@ -76,3 +76,10 @@ table {
 .input-table {
     font-size: 14px;
 }
+
+@media screen and (max-width: 800px) {
+    .case-image {
+      width: 43%;
+      height: 43%;
+    }
+  }
