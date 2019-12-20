@@ -1,3 +1,4 @@
+document.querySelector('form').addEventListener('submit', calculate);
 function calculate() {
     let yp1 = document.getElementById('n3').value;
     let yp2 = document.getElementById('n11').value;
@@ -150,4 +151,20 @@ function collapse(yp, dt) {
     }
     return pressure;
 
+}
+
+function reset(){
+    let clear = "";
+    document.querySelector("form").reset();
+    document.getElementById('n30').innerHTML = clear;
+    document.getElementById('n31').innerHTML = clear;
+    document.getElementById('n32').innerHTML = clear;
+    document.getElementById('n33').innerHTML = clear;
+    document.getElementById('n34').innerHTML = clear;
+    document.getElementById('n35').innerHTML = clear;
+    document.getElementById('n36').innerHTML = clear;
+    document.getElementById('new33').innerHTML = clear;
+    document.getElementById('new34').innerHTML = clear;
+    document.getElementById('new35').innerHTML = clear;
+    document.getElementById('new36').innerHTML = clear;
 }

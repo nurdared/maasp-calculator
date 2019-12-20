@@ -1,3 +1,4 @@
+document.querySelector('form').addEventListener('submit', calculate);
 function calculate() {
     let yp1 = document.getElementById('n3').value;
     let yp2 = document.getElementById('n11').value;
@@ -42,9 +43,8 @@ function calculate() {
     let point1 = document.getElementById('n17').value;
     let point2 = document.getElementById('n18').value;
     let point3 = document.getElementById('n19').value;
-    let point5 = document.getElementById('n20').value;
-    let point7a = document.getElementById('n21').value;
-    let point8 = document.getElementById('n22').value;
+    let point4 = document.getElementById('n20').value;
+  
 
     //fluids
     let fg = document.getElementById('n23').value;
@@ -55,30 +55,21 @@ function calculate() {
     //SF and equipments
     let sffBurst = document.getElementById('n27').value;
     let sffAcc = document.getElementById('n28').value;
-    let packerPr = document.getElementById('n29').value;
     let wellHeadPr = document.getElementById('new27').value;
 
     //MAASP Result
-    let maasp1 = (collapse2 / sffAcc) - point1 * (fda - fdTubing) * 0.052;
+    let maasp1 = point1 * (fg - fda) * 0.052;
     document.getElementById('n30').innerHTML = maasp1.toFixed(3);
 
-    let maasp2 = (collapse2 / sffAcc) - point2 * (fda - fdTubing) * 0.052;
+    let maasp2 = (collapse1 / sffAcc) - point2 * (fda - fdTubing) * 0.052;
     document.getElementById('n31').innerHTML = maasp2.toFixed(3);
 
-    let maasp3 = (collapse2 / sffAcc) - point3 * (fda - fdTubing) * 0.052;
+    let maasp3 = (collapse2 / sffAcc) - point3 * (fda - bf) * 0.052;
     document.getElementById('n32').innerHTML = maasp3.toFixed(3);
 
-    let maasp4 = (point3 * fg * 0.052) + packerPr - (point3 * fda * 0.052);
+    let maasp4 = wellHeadPr/sffBurst;
     document.getElementById('n33').innerHTML = maasp4.toFixed(3);
 
-    let maasp5 = (collapse2 / sffAcc) - point5 * (fda - fdTubing) * 0.052;
-    document.getElementById('n34').innerHTML = maasp5.toFixed(3);
-
-    let maasp6 = (burst1 / sffBurst) - point7a * (fda - bf) * 0.052;
-    document.getElementById('n35').innerHTML = maasp6.toFixed(3);
-
-    let maasp7 = document.getElementById('new27').value;
-    document.getElementById('n36').innerHTML = maasp7;
 
 
 }
@@ -120,4 +111,13 @@ function collapse(yp, dt) {
     }
     return pressure;
 
+}
+
+function reset(){
+    let clear = "";
+    document.querySelector("form").reset();
+    document.getElementById('n30').innerHTML = clear;
+    document.getElementById('n31').innerHTML = clear;
+    document.getElementById('n32').innerHTML = clear;
+    document.getElementById('n33').innerHTML = clear;
 }

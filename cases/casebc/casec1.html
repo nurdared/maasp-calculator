@@ -14,7 +14,7 @@
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
+  <link href="/assets/favicon.png" rel="icon">
 
   <link href="" rel="stylesheet">
 
@@ -69,6 +69,11 @@
                 Resources
                 <span class="caret"></span>
               </a>
+              <ul class="dropdown-menu" aria-labelledby="Preview">
+                <li><a target="_blank" href="https://pdfhost.io/v/HFgRQld7_Annular_Casing_Pressure_Management_for_Onshore_Wells.pdf">API RP-90</a></li>
+                <li><a target="_blank" href="https://pdfhost.io/v/BdVdEKnp_ISO_TS_165302pdf.pdf">ISO16530-2</a></li>
+                <li><a target="_blank" href="https://pdfhost.io/v/1fvx1INX_Casing_Design_Theory_and_Practice.pdf">Casing Design: T.P.</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -82,18 +87,21 @@
         <h1>C-annulus Case 1</h1>
         <div class="description row">
           <img class="case-image" src="/assets/images/Ccase1.png" alt="">
-          <p class="text">Instruction:
-            <br>1. Set input variables for each casing
-            <br>2. Take average corrosion rate (ACR) from Project passport Table 5
-            <br>3. Set depth of required points
-            <br>4. Set fluid properties and safety factors
-            <br>5. Click on the button calculate to calculate MAASP         
-            <br>6. Click on the button reset to reser input data
-          </p>
+          <div class="text">
+            <h3>Instruction:</h3>
+            <ol>
+              <li>Set input variables for each casing</li>
+              <li>Take average corrosion rate (ACR) from Project passport Table 5</li>
+              <li>Set depth of required points</li>
+              <li>Set fluid properties and safety factors</li>
+              <li>Click on the button calculate to calculate MAASP </li>
+              <li>Click on the button reset to reset input data</li>
+            </ol>
+          </div>
              
         </div>
         <hr>
-        <table>
+        <table class="input-table">
           <thead>
             <tr class="row">
               <th>Input of pipes</th>
@@ -218,13 +226,24 @@
               <td>BF</td>
               <td><input required type="text" id="n26"></td>
             </tr>
+            <tr class="row"></tr>
+            <tr class="row"></tr>
+            <tr class="row"></tr>
+            <tr class="row">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button type="submit" class="btn btn-primary btn-sm" style="width: 100px;">
+                <strong>CALCULATE</strong></button></td>
+              <td><a type="#" class="btn btn-danger btn-sm" style="width: 100px;" onclick="reset()"><strong>RESET</strong></a></td>
+            </tr>
           </tbody>
-        </table>
+        </table class="input-table">
       </div>
 
       <hr>
       <div>
-        <table>
+        <table class="result-table">
           <thead>
             <tr>
               <th colspan="2">MAASP, psi</th>
@@ -232,26 +251,25 @@
           </thead>
           <tbody>
             <tr>
-              <td>Point 1</td>
-              <td id="n30"></td>
+              <td class="result-table__data">Point 1</td>
+              <td class="result-table__calc text-primary" id="n30"></td>
             </tr>
             <tr>
               <td>Point 2A</td>
-              <td id="n31"></td>
+              <td class="result-table__calc text-primary" id="n31"></td>
             </tr>
             <tr>
               <td>Point 3</td>
-              <td id="n32"></td>
+              <td class="result-table__calc text-primary" id="n32"></td>
             </tr>
             <tr>
               <td>Point 4</td>
-              <td id="n33"></td>
+              <td class="result-table__calc text-primary" id="n33"></td>
             </tr>
 
           </tbody>
-        </table>
+        </table class="result-table">
       </div>
-      <button type="submit" class="btn btn-primary btn-sm" onclick="calculate()">Calculate</button>
     </form>
   </div>
 

@@ -14,7 +14,7 @@
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
+  <link href="/assets/favicon.png" rel="icon">
 
   <link href="" rel="stylesheet">
 
@@ -69,6 +69,11 @@
                 Resources
                 <span class="caret"></span>
               </a>
+              <ul class="dropdown-menu" aria-labelledby="Preview">
+                <li><a target="_blank" href="https://pdfhost.io/v/HFgRQld7_Annular_Casing_Pressure_Management_for_Onshore_Wells.pdf">API RP-90</a></li>
+                <li><a target="_blank" href="https://pdfhost.io/v/BdVdEKnp_ISO_TS_165302pdf.pdf">ISO16530-2</a></li>
+                <li><a target="_blank" href="https://pdfhost.io/v/1fvx1INX_Casing_Design_Theory_and_Practice.pdf">Casing Design: T.P.</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -96,7 +101,7 @@
 
         </div>
         <hr>
-        <table>
+        <table class="input-table">
           <thead>
             <tr class="row">
               <th>Input of pipes</th>
@@ -232,17 +237,17 @@
               <td>Point 8</td>
               <td><input required type="text" id="n22"></td>
               <td></td>
-              <td><button type="submit" class="btn btn-primary btn-sm" style="width: 100px;"
-              onclick="calculate()"><strong>CALCULATE</strong></button></td>
+              <td><button type="submit" class="btn btn-primary btn-sm" style="width: 100px;">
+                <strong>CALCULATE</strong></button></td>
               <td><a type="#" class="btn btn-danger btn-sm" style="width: 100px;" onclick="reset()"><strong>RESET</strong></a></td>
             </tr>
           </tbody>
-        </table>
+        </table class="input-table">
       </div>
 
       <hr>
       <div>
-        <table>
+        <table class="result-table">
           <thead>
             <tr>
               <th colspan="2">MAASP, psi</th>
@@ -250,32 +255,32 @@
           </thead>
           <tbody>
             <tr>
-              <td>Point 1</td>
-              <td id="n30"></td>
+              <td class="result-table__data">Point 1</td>
+              <td id="n30" class="result-table__calc text-primary"></td>
             </tr>
             <tr>
               <td>Point 2</td>
-              <td id="n31"></td>
+              <td id="n31" class="result-table__calc text-primary"></td>
             </tr>
             <tr>
-              <td>Point 3, packer collapse</td>
-              <td id="n32"></td>
+              <td >Point 3</td>
+              <td id="n32" class="result-table__calc text-primary"></td>
             </tr>
             <tr>
               <td>Point 3, element rating</td>
-              <td id="n33"></td>
+              <td id="n33" class="result-table__calc text-primary"></td>
             </tr>
             <tr>
               <td>Point 5</td>
-              <td id="n34"></td>
+              <td id="n34" class="result-table__calc text-primary"></td>
             </tr>
             <tr>
               <td>Point 7A</td>
-              <td id="n35"></td>
+              <td id="n35" class="result-table__calc text-primary"></td>
             </tr>
             <tr>
               <td>Point 8</td>
-              <td id="n36"></td>
+              <td id="n36" class="result-table__calc text-primary"></td>
             </tr>
           </tbody>
         </table>
